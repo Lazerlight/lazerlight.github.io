@@ -5,9 +5,15 @@
 :root {
   --cell-size: 100px;
   --mark-size: calc(var(--cell-size) * 0.9);
+
+  --hue: 200;
+  --stauration: 50%;
+  --foreground-color: hsl(var(--hue), var(--stauration), 75%);
+  --background-color: hsl(var(--hue), var(--stauration), 20%);
 }
 body {
   margin: 0;
+  background-color: var(--background-color);
 }
 .board {
   width: 100vw;
@@ -23,7 +29,7 @@ body {
 .cell {
   width: var(--cell-size);
   height: var(--cell-size);
-  border: 1px solid black;
+  border: 1px solid var(--foreground-color);
   display: flex;
   position: relative;
   justify-content: center;
@@ -68,7 +74,7 @@ body {
   position: absolute;
   width: calc(var(--mark-size) * 0.15);
   height: var(--mark-size);
-  background-color: black;
+  background-color: var(--foreground-color);
 }
 
 .cell.x::before,
@@ -88,7 +94,7 @@ body {
   position: absolute;
   width: var(--mark-size);
   height: var(--mark-size);
-  border: calc(var(--mark-size) * 0.15) black solid;
+  border: calc(var(--mark-size) * 0.15) var(--foreground-color) solid;
   border-radius: 50%;
 }
 .winning-message {
@@ -108,7 +114,7 @@ body {
 .winning-message button {
   font-size: 3rem;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid var(--foreground-color);
   padding: 0.25em 0.5em;
   cursor: pointer;
 }

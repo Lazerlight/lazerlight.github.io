@@ -15,6 +15,9 @@ const messageEl = document.querySelector("[data-winning-text]");
 const messageElDiv = document.querySelector(".winning-message");
 const boardEl = document.getElementById("board");
 const restartButton = document.getElementById("restartButton");
+var intervalId = window.setInterval(function () {
+  update();
+}, 10);
 
 let circleTurn;
 
@@ -31,6 +34,12 @@ function startGame() {
   });
   setBoardHover();
   messageElDiv.classList.remove("show");
+}
+function update() {
+  const hue = parseFloat(
+    getComputedStyle(document.documentElement).getPropertyValue("--hue")
+  );
+  document.documentElement.style.setProperty("--hue", hue + 0.2);
 }
 function handleClick(e) {
   const cell = e.target;
