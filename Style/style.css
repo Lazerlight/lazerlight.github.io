@@ -1,0 +1,632 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans";
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --Primary: cyan;
+  --Secondary: white;
+  --Black: #110f0e;
+  --PrimaryOpacity: rgba(0, 255, 255, 0.6);
+  --BlackOpacity: rgba(0, 0, 0, 0.6);
+  --BlackOpacity-500: #110f0e8a;
+}
+/* Animations */
+@keyframes logoAnimation {
+  0% {
+    font-size: 2rem;
+
+    color: var(--Primary);
+  }
+  50% {
+    font-size: 1rem;
+
+    color: var(--Secondary);
+  }
+}
+@keyframes spanAnimation {
+  0% {
+    font-size: 1rem;
+    color: var(--Secondary);
+  }
+  50% {
+    font-size: 2rem;
+    color: var(--Primary);
+  }
+}
+
+body {
+  background: url(../Images/background.jpg);
+  background-size: 10px;
+}
+/* ----------------------------------- Hero START ---------------------------------------------- */
+.hero {
+  height: 60rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+/* Nav Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 3rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.logo-container {
+  margin-left: 1rem;
+  width: 15rem;
+  height: 1rem;
+}
+.name-logo {
+  font-size: 2rem;
+  animation: infinite logoAnimation 5s;
+  color: var(--Primary);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+span {
+  font-size: 1rem;
+  animation: infinite spanAnimation 5s;
+  color: var(--Secondary);
+}
+nav ul li {
+  display: inline-block;
+  padding: 1rem 2rem;
+  list-style-type: none;
+}
+nav ul li a {
+  transition: 0.5s;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--Secondary);
+}
+nav ul li a:hover {
+  background-color: transparent;
+  transition: 0.5s;
+  font-size: 1.4rem;
+  color: var(--Primary);
+  transition: 0.5s;
+}
+.contact-btn {
+  font-size: 1.2rem;
+  background-color: var(--PrimaryOpacity);
+  color: var(--Secondary);
+  font-weight: bold;
+  text-decoration: none;
+  border: solid transparent 2px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.contact-btn:hover {
+  transform: scale(1.2);
+  background-color: transparent;
+  transition: 0.5s;
+  color: var(--Primary);
+}
+/* Button Class */
+.btn {
+  font-size: 1.2rem;
+  background-color: var(--PrimaryOpacity);
+  color: var(--Secondary);
+  font-weight: bold;
+  text-decoration: none;
+  border: solid transparent 2px;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+.btn:hover {
+  transform: scale(1.2);
+  background-color: transparent;
+  transition: 0.5s;
+  color: var(--Primary);
+}
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 10%;
+}
+.hero-text-container {
+  box-shadow: 1px 1px 15px 20px var(--Primary);
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: var(--BlackOpacity);
+  height: 25rem;
+  border: black solid 10px;
+  border-radius: 2rem;
+}
+.hero-text {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+h1 {
+  color: var(--Primary);
+  font-size: 5rem;
+}
+h3 {
+  color: var(--Secondary);
+}
+h4 {
+  font-size: 1.5rem;
+  color: var(--Secondary);
+}
+h6 {
+  color: var(--Secondary);
+  font-size: 0.8rem;
+}
+/* Mail Form Element */
+.email-form-container {
+  margin-top: 4rem;
+  justify-content: center;
+  justify-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.email-form form {
+  display: inline-block;
+  width: 100%;
+}
+.email-form form input:first-child {
+  font-size: 16px;
+  box-shadow: 1px 1px 5px 5px var(--Secondary);
+  border: 2px transparent solid;
+  border-radius: 1rem;
+  padding: 1rem 50% 1rem 1rem;
+}
+.email-btn {
+  box-shadow: 0px 0px 10px 5px var(--PrimaryOpacity);
+  background-color: var(--PrimaryOpacity);
+  margin-left: 1rem;
+  margin-top: 2rem;
+  width: 8rem;
+}
+.email-btn:hover {
+  box-shadow: 0px 0px 0px 0px transparent;
+}
+
+/* ----------------------------------- Hero END ---------------------------------------------- */
+
+/* ----------------------------------- About START ---------------------------------------------- */
+.about {
+  padding-top: 10rem;
+  height: 60rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+h2 {
+  font-size: 6rem;
+}
+.about-content {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+  background-color: #110f0e;
+  box-shadow: #110f0e8a 0px 0px 10rem 10rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 5rem;
+  height: 35rem;
+  border-radius: 2rem;
+}
+.about-text {
+  height: 100%;
+  color: var(--Secondary);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  gap: 5rem;
+}
+#span {
+  animation: none;
+  font-size: 6rem;
+  color: var(--Primary);
+}
+.about-button {
+  margin-top: 7rem;
+}
+.about-button a {
+  text-decoration: none;
+  text-align: center;
+  justify-content: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  display: flex;
+}
+/* ----------------------------------- About END ---------------------------------------------- */
+
+/* ----------------------------------- Services START ---------------------------------------------- */
+
+.services {
+  height: 50rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+.services-content {
+  background-color: #110f0e8a;
+  box-shadow: #110f0e8a 0px 0px 10rem 5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 40rem;
+  border-radius: 2rem;
+}
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4rem;
+}
+.service {
+  box-shadow: 0px 10px cyan;
+  border: 1px solid var(--Primary);
+  width: 30%;
+  height: 40rem;
+  background-color: #110f0e;
+  border-radius: 2rem;
+}
+.service i {
+  font-size: 6rem;
+  color: var(--Primary);
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+.service h5 {
+  color: var(--Secondary);
+  font-size: 3rem;
+}
+.service p {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 5rem;
+  font-size: 1.2rem;
+  height: 100%;
+  color: var(--Secondary);
+}
+
+/* ----------------------------------- Services END ---------------------------------------------- */
+
+/* ----------------------------------- Projects START ---------------------------------------------- */
+
+.projects {
+  width: 100%;
+}
+.projects-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 10rem;
+  border-radius: 2rem;
+}
+.project-btn a {
+  color: var(--Primary);
+  background-color: var(--BlackOpacity-500);
+}
+.project-btn {
+  color: var(--Primary);
+  background-color: #110f0e8a;
+}
+
+/* ----------------------------------- Projects END ---------------------------------------------- */
+
+/* ----------------------------------- Contacts START ---------------------------------------------- */
+.icon-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+.icon-container a {
+  background-color: var(--Black);
+  border: var(--Primary) 5px solid;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-right: 5rem;
+  width: 15rem;
+  height: 15rem;
+}
+i {
+  color: var(--Primary);
+}
+.contacts {
+  height: 40rem;
+  width: 100%;
+  background-color: var(--BlackOpacity);
+}
+.contacts-content {
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 40rem;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+}
+.contacts-container {
+  color: var(--Primary);
+  display: grid;
+  height: 100%;
+}
+.header-text-container {
+  margin-top: 5rem;
+}
+.header-text-container h2 {
+  font-size: 8rem;
+  text-shadow: var(--Primary) 0 0 10px;
+}
+i {
+  font-size: 10rem;
+}
+.phoneEmail-container {
+  display: flex;
+  padding-top: 3rem;
+  justify-content: space-between;
+}
+
+.mail,
+.phone {
+  box-shadow: var(--Primary) 0 0 10px;
+  border: none;
+  background-color: var(--Black);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+/* ----------------------------------- Contacts END ---------------------------------------------- */
+
+/* ----------------------------------- Media Queries START ---------------------------------------------- */
+@media screen and (max-width: 1445px) {
+  .about-content {
+    height: 40rem;
+    padding-bottom: 14rem;
+  }
+  .about-button {
+    margin-top: 16rem;
+  }
+
+  i {
+    font-size: 5rem;
+  }
+  .icon-container a {
+    margin-right: 3rem;
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .about {
+    height: 80rem;
+  }
+  .services {
+    height: 75rem;
+  }
+  .about-content {
+    height: 60rem;
+  }
+  .service {
+    height: 50rem;
+  }
+  .service h5 {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .nav-container {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  nav {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+  nav ul {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  nav ul li {
+    padding-bottom: 0.2rem;
+  }
+  nav ul li a,
+  .contact-btn {
+    border: var(--Primary) solid 2px;
+
+    display: block;
+    padding: 0.6rem 1rem;
+    background-color: transparent;
+    border-radius: 30px;
+    transition: 0.5s;
+  }
+  .contact-btn {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: 10%;
+    margin-left: 15%;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  .hero-text-container {
+    box-shadow: 0px 0px 10px 10px var(--Primary);
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  #span {
+    font-size: 3rem;
+  }
+  .about {
+    height: 65rem;
+  }
+  #AboutText {
+    font-size: 1.1rem;
+  }
+  .about-content {
+    height: 40rem;
+  }
+  .services {
+    height: 125rem;
+  }
+  .services-content {
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 40rem;
+  }
+  .services-container {
+    display: grid;
+    gap: 4rem;
+  }
+  .service {
+    width: 100%;
+    height: 37rem;
+  }
+  .service h5 {
+    font-size: 3rem;
+  }
+  .services i {
+    font-size: 7rem;
+  }
+  i {
+    font-size: 5rem;
+  }
+  .icon-container a {
+    margin-right: 1rem;
+    width: 10rem;
+    height: 10rem;
+  }
+  .contacts-content {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+}
+@media screen and (max-width: 735px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  .email-form form input:first-child {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+  .email-btn {
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 8rem;
+  }
+  .about-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 80%;
+    height: 35rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .about-button a {
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 2.5rem;
+    width: 90%;
+  }
+  .about {
+    height: 60rem;
+  }
+  #AboutText {
+    font-size: 1rem;
+  }
+  .services {
+    height: 137.5rem;
+  }
+  .service {
+    height: 40rem;
+  }
+  .icon-container {
+    flex-direction: column;
+  }
+  i {
+  }
+  .icon-container a {
+    margin-bottom: 2rem;
+  }
+  .icon-container a:last-child {
+    margin-bottom: 0;
+  }
+  .contacts-content {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .header-text-container h2 {
+    font-size: 3rem;
+  }
+  .contacts {
+    height: 60rem;
+  }
+  .phoneEmail-container {
+    background-color: var(--BlackOpacity);
+  }
+}
+@media screen and (max-width: 425px) {
+  .email-form form input:first-child {
+    padding: 1rem 1rem 1rem 0;
+  }
+  .about-content {
+    height: 40rem;
+  }
+  .service {
+    height: 45rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  h4 {
+    font-size: 0.8rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 0.6rem;
+  }
+  .email-form form input:first-child {
+    padding: 1rem 0 1rem 0;
+  }
+  .email-btn {
+    margin-left: 1.5rem;
+  }
+}
+
+/* ----------------------------------- Media Queries END ---------------------------------------------- */
